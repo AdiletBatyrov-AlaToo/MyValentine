@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffebee;
+  font-family: 'Bad Script', cursive;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  background-color: #ffebee;
+  padding: 20px;
+  border-radius: 30px;
+  border: 3px solid #decccf;
+  box-shadow: 0 8px 20px #9a8d8f;
+  max-width: 400px;
+  width: 90%;
+  margin: 20px;
+}
+
+.header_text {
+  font-size: 36px;
+  color: #a374d5;
+  margin-bottom: -10px; /* Уменьшил отступ снизу в 3 раза */
+}
+
+.gif_container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: -10px; /* Уменьшил отступ снизу в 3 раза */
+}
+
+.buttons {
+  margin-top: -10px; /* Поднял кнопки выше в 3 раза */
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background-color: #be97dc;
+  border: 2px solid #876a9d;
+  border-radius: 20px;
+  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  font-family: 'Bad Script', cursive;
+}
+
+.btn:hover {
+  background-color: #876a9d;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+}
+
+#noButton {
+  background-color: #be97dc;
+  border: 2px solid #876a9d;
+}
+
+#noButton:hover {
+  background-color: #876a9d;
+  color: white;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.wiggle {
+  animation: wiggle 0.5s ease-in-out;
+}
+
+@keyframes heartFade {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.5); }
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  transform: translate(-50%, -50%);
+  animation: heartFade 1s ease-out forwards;
+  background-color: #a374d5;
+  border-radius: 50%;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+    margin: 10px;
+    border-radius: 25px;
+  }
+
+  .header_text {
+    font-size: 28px;
+    margin-bottom: -10px; /* Уменьшил отступ снизу в 3 раза */
+  }
+
+  .gif_container img {
+    margin-bottom: -10px; /* Уменьшил отступ снизу в 3 раза */
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .buttons {
+    gap: 10px;
+  }
+}
+
+/* Адаптивность для очень маленьких экранов */
+@media (max-width: 400px) {
+  .header_text {
+    font-size: 24px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .buttons {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .container {
+    margin: 5px;
+    padding: 10px;
+  }
+}
